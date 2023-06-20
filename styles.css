@@ -1,0 +1,248 @@
+@font-face {
+  font-family: 'Underdog';
+  src: url('./assets/fonts/Underdog-Regular.ttf');
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  margin: 0;
+}
+
+.backgroundImage {
+  width: 300px;
+  height: 200px;
+}
+
+.Container {
+  display: flex;
+  flex-direction: column;
+}
+
+.Container p {
+  font-family: 'Arial Narrow';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 12px;
+  letter-spacing: -0.02em;
+  text-transform: lowercase;
+  color: #000000;
+  text-shadow: -0.2px 0 black, 0 0.2px black, 0.2px 0 black, 0 -0.2px black;
+  margin: 0;
+}
+
+.Container h1 {
+  font-family: 'Arial Narrow';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 18px;
+  text-align: right;
+  letter-spacing: -0.02em;
+  color: #000000;
+  margin: 0;
+}
+
+.Container h2 {
+  font-family: 'Arial Narrow';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+  text-align: right;
+  letter-spacing: -0.02em;
+  color: #000000;
+  text-shadow: -0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black;
+  margin: 0;
+}
+
+.Container h3 {
+  font-family: 'Lacquer';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 24px;
+  letter-spacing: -0.04em;
+  text-transform: lowercase;
+  color: #000000;
+  text-shadow: -0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black;
+  margin: 0;
+}
+
+.Container h4 {
+  font-family: 'Underdog';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: -0.08em;
+  color: #000000;
+  text-shadow: -0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black;
+  margin: 0;
+}
+
+.Container .About {
+  display: grid;
+  margin: 18px 18px 24px 18px;
+  grid-template-columns: repeat(24, 54px);
+  grid-template-rows: repeat(4, 12px);
+  gap: 0 6px;
+}
+
+.Container .About .circle {
+  width: 12px;
+  height: 12px;
+  background: #000000;
+  border-radius: 100%;
+}
+
+.Container .About .AboutSaveButton,
+.Container .About .AboutChangeACaveButton,
+.Container .About .AboutClearButton,
+.Container .About .AboutSizeSensor,
+.Container .About .AboutColorSensor,
+.Container .About .AboutHardnessSensor {
+  display: flex;
+  flex-direction: row;
+}
+
+.Container .About .AboutSaveButton p,
+.Container .About .AboutChangeACaveButton p,
+.Container .About .AboutClearButton p,
+.Container .About .AboutSizeSensor p,
+.Container .About .AboutColorSensor p,
+.Container .About .AboutHardnessSensor p {
+  margin-left: 2px;
+}
+
+.Container .About .AboutClearButton {
+  grid-row-start: 2;
+  grid-column-start: 12;
+  grid-column-end: 16;
+}
+
+.Container .About .AboutChangeACaveButton {
+  grid-row-start: 3;
+  grid-column-start: 12;
+  grid-column-end: 16;
+}
+
+.Container .About .AboutSaveButton {
+  grid-row-start: 4;
+  grid-column-start: 13;
+  grid-column-end: 16;
+}
+
+.Container .About .AboutSizeSensor {
+  grid-area: 2 / 19 / 3 / 26;
+}
+
+.Container .About .AboutColorSensor {
+  grid-area: 3 / 16 / 4 / 25;
+}
+
+.Container .About .AboutHardnessSensor {
+  grid-area: 4 / 16 / 5 / 25;
+}
+
+.Container .About .messageBackground {
+  position: absolute;
+  left: 450px;
+  top: 17px;
+  z-index: -1;
+}
+
+.Container .WorkSpace {
+  height: 100%;
+  width: 1458px;
+  margin: 0 6px;
+  border-radius: 4px 4px 0px 0px;
+  overflow: hidden;
+}
+.Container .WorkSpace .Sketch {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.Container .WorkSpace .bottomManipulators {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 4px;
+
+  position: absolute;
+  top: 784px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.Container .WorkSpace .bottomManipulators .buttonsSet {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0px;
+  gap: 4px;
+}
+
+.Container .WorkSpace .bottomManipulators .sensorsValues {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 2px 32px 4px;
+  gap: 32px;
+  margin-top: 2.5px;
+  transform: rotate(1deg);
+}
+
+.Container .WorkSpace .bottomManipulators .buttonsSet .changeACaveButton,
+.clearButton,
+.saveButton,
+.sensorsValues {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 2px 32px 4px;
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(0.5px);
+  border-radius: 1px;
+
+  font-family: 'Arial Narrow';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 18px;
+  color: #000000;
+
+  white-space: nowrap;
+}
+
+.Container .WorkSpace .bottomManipulators .buttonsSet .changeACaveButton,
+.clearButton,
+.saveButton {
+  cursor: pointer;
+}
+
+.Container .WorkSpace .buttonsSet .clearButton {
+  transform: rotate(-2deg);
+  margin-top: 2.5px;
+}
+
+.Container .WorkSpace .buttonsSet .sensorsValues {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 2px 32px 4px;
+  gap: 32px;
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(0.5px);
+  border-radius: 1px;
+  transform: rotate(1deg);
+}
